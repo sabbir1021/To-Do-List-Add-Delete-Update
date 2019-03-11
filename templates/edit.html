@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if all_items %}
+
+<form class="form-inline my-2 my-lg-0" method="POST">
+    {% csrf_token %}
+    <input class="form-control mr-sm-2" type="search" placeholder = "{{ all_items.item }}" value = "{{ all_items.item }}" aria-label="Add item "
+        name="item">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Edit Item</button>
+</form>
+
+
+{% endif %}
+
+{% endblock %}
